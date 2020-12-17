@@ -6,6 +6,10 @@ li {
   list-style: none;
 }
 
+input {
+  border: 1px solid #dfdede;
+}
+
 /* Header */
 header {
   height: 5em;
@@ -40,5 +44,62 @@ header {
 }
 
 .nav_menu_title a:hover {
+  text-shadow: 5px 5px 5px #000;
+}
+
+.nav_link a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 2px 2px #000;
+}
+
+.nav_link a:hover {
   text-shadow: 3px 3px 3px #000;
+}
+
+/* user sign up_in */
+.sign_user {
+  margin-top: 10vh;
+}
+
+.sign_title, .actions {
+  text-align: center;
+}
+
+.sign_title a {
+  color: rgb(90, 165, 235);
+}
+
+.sign_user h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.field {
+  margin: 3vh auto;
+  max-width: 500px;
+}
+
+.field input {
+  height: 4vh;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.field label {
+  font-size: large;
+}
+
+.submit_btn {
+  height: 50px;
+  width: 250px;
+  border-radius:2.5em;
+  background-color: rgb(90, 165, 235);
+  color: #fff;
+  font-size: 1em;
+}
+
+.submit_btn:hover {
+  opacity: 0.5;
 }
