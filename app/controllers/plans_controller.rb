@@ -19,6 +19,6 @@ class PlansController < ApplicationController
   private
 
   def plan_params
-    params.require(:plan).permit(:title).merge(user_id: crrent_user.id)
+    params.require(:plan).permit(:title).merge(user_id: current_user.id)
   end
 end

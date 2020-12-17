@@ -59,19 +59,19 @@ header {
 }
 
 /* user sign up_in */
-.sign_user {
+.post_wrapper {
   margin-top: 10vh;
 }
 
-.sign_title, .actions {
+.post_title, .actions {
   text-align: center;
 }
 
-.sign_title a {
+.post_title a {
   color: rgb(90, 165, 235);
 }
 
-.sign_user h1 {
+.post_wrapper h1 {
   font-size: 2em;
   font-weight: bold;
 }
@@ -102,4 +102,14 @@ header {
 
 .submit_btn:hover {
   opacity: 0.5;
+}
+
+/* Plan Create */
+.post_wrapper_plan {
+  margin-top: 5vh;
+}
+
+.post_wrapper_plan h1 {
+  font-size: 2em;
+  font-weight: bold;
 }
