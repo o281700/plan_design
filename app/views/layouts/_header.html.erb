@@ -5,7 +5,6 @@
       <li>
         <ul class="nav_menu_item">
           <% if user_signed_in? %>
-            <li class='nav_menu_name nav_link'><%= current_user.nickname %></li>
             <li class='nav_link'><%= link_to '新規作成', new_plan_path %></li>
             <li class='nav_link'><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
           <% else %>

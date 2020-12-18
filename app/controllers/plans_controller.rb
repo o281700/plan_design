@@ -16,6 +16,12 @@ class PlansController < ApplicationController
     end
   end
 
+  def destroy
+    plan = Plan.find(params[:id])
+    plan.destroy
+    redirect_to root_path
+  end
+
   private
 
   def plan_params

@@ -119,16 +119,16 @@ header {
 .index_main {
   padding: 0 5%;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .index_item {
   border: 1px solid #000;
   display: flex;
-  width: 30%;
+  width: 25%;
   height: 10vh;
-  margin-top: 5vh;
+  margin: 10vh calc((100% - (25% * 3)) / 6 ) 0;
   padding: 0 2%;
   justify-content: space-between;
   align-items: center;
@@ -137,12 +137,11 @@ header {
   background-color: #f1efef;
 }
 
-.index_item h2 {
-  font-size: large;
+.index_item_title {
+  line-height: 1.5em;
 }
 
 /* FontAwesome */
-
 .fa-edit, .fa-trash-o {
   color: #000;
   padding: 5px;

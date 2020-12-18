@@ -3,12 +3,16 @@
 <div class='index_main'>
   <% @plans.each do |plan| %>
     <div class='index_item'>
-      <h2><%= plan.title %></h2>
+      <div class='index_item_title'>
+        <%= plan.title %>
+        <br />
+        <%= "作成者: #{plan.user.nickname}" %>
+      </div>
       <div class='plan_nav'>
         <%= link_to '#' do %>
           <i class="fa fa-edit fa-lg" aria-hidden="true"></i>
         <% end %>
-        <%= link_to '#' do %>
+        <%= link_to plan, method: :delete do %>
           <i class="fa fa-trash-o fa-lg"></i>
         <% end %>
       </div>
