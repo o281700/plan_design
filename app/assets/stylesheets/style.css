@@ -113,3 +113,24 @@ header {
   font-size: 2em;
   font-weight: bold;
 }
+
+/* Index */
+.index_main {
+  padding: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.index_item {
+  border: 1px solid #000;
+  display: flex;
+  width: 30%;
+  height: 10vh;
+  margin-top: 5vh;
+  padding: 0 1%;
+  justify-content: space-between;
+  align-items: center;
+  border-radius:1em;
+  box-sizing: border-box;
+}

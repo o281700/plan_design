@@ -1,1 +1,13 @@
 <%= render 'layouts/header' %>
+
+<div class='index_main'>
+  <% @plans.each do |plan| %>
+    <div class='index_item'>
+      <h2><%= plan.title %></h2>
+      <div class='plan_nav'>
+        <span>削除</span>
+        <span>編集</span>
+      </div>
+    </div>
+  <% end %>
+</div>
