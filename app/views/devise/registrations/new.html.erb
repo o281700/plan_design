@@ -1,9 +1,9 @@
-<div class='sign_user'>
-  <div class='sign_title'>
+<div class='post_wrapper'>
+  <div class='post_title'>
     <h1>アカウント新規作成</h1><br />
     <p><%= link_to 'アカウントにログイン', new_user_session_path %></p>
   </div>
-  <div class='sign_container'>
+  <div class='post_container'>
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
