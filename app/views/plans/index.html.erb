@@ -5,8 +5,12 @@
     <div class='index_item'>
       <h2><%= plan.title %></h2>
       <div class='plan_nav'>
-        <span>削除</span>
-        <span>編集</span>
+        <%= link_to '#' do %>
+          <i class="fa fa-edit fa-lg" aria-hidden="true"></i>
+        <% end %>
+        <%= link_to '#' do %>
+          <i class="fa fa-trash-o fa-lg"></i>
+        <% end %>
       </div>
     </div>
   <% end %>
