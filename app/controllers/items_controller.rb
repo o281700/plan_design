@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:edit, :update]
+
   def new
     @item = Item.new
   end
@@ -19,11 +21,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    @item = Item.find(params[:id])
     if @item.update(item_params)
       redirect_to plan_path(@item.plan.id)
     else
@@ -35,5 +35,9 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:title).merge(plan_id: params[:plan_id])
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 end

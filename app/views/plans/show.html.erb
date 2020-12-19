@@ -25,8 +25,8 @@
           <div>*** 詳細表示 ***</div>
           <div>*** 詳細表示 ***</div>
           <div>*** 詳細表示 ***</div>
-          <div>
-            <a href='#'>詳細追加</a>
+          <div class='show_detail_link'>
+            <%= link_to '詳細登録', new_plan_item_detail_path(@plan.id, plan_item.id) %>
           </div>
         </div>
       <% end %>
