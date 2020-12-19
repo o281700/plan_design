@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   def create
     item = Item.new(item_params)
     if item.save
-      redirect_to root_path
+      redirect_to plan_path(item.plan)
     else
       render :new
     end
