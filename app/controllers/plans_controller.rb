@@ -1,4 +1,6 @@
 class PlansController < ApplicationController
+  before_action :set_plan, only: [:edit, :update, :show, :destroy]
+
   def index
     @plans = Plan.includes(:user)
   end
@@ -17,18 +19,15 @@ class PlansController < ApplicationController
   end
 
   def destroy
-    plan = Plan.find(params[:id])
-    plan.destroy
+    @plan.destroy
     redirect_to root_path
   end
 
   def edit
-    @plan = Plan.find(params[:id])
   end
 
   def update
-    plan = Plan.find(params[:id])
-    if plan.update(plan_params)
+    if @plan.update(plan_params)
       redirect_to root_path
     else
       render :edit
@@ -36,12 +35,15 @@ class PlansController < ApplicationController
   end
 
   def show
-    @plan = Plan.find(params[:id])
   end
 
   private
 
   def plan_params
     params.require(:plan).permit(:title).merge(user_id: current_user.id)
+  end
+
+  def set_plan
+    @plan = Plan.find(params[:id])
   end
 end
