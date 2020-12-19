@@ -1,0 +1,35 @@
+<%= render 'layouts/header' %>
+
+<div class='show_main'>
+  <div class='show_wrapper'>
+    <div class='show_title'>
+      <span><%= @plan.title %></span>
+      <%= link_to new_plan_item_path(@plan.id), class: 'show_fa' do %>
+        <i class="fa fa-plus-square-o" aria-hidden="true"> アイテム追加</i>
+      <% end %>
+    </div>
+    <div class='show_item_wrapper'>
+      <% @plan.items.each do |plan_item| %>
+        <div class='show_item_container'>
+          <div class='show_item_title'>
+            <%= plan_item.title %>
+            <div>
+              <%= link_to edit_plan_item_path(@plan.id, plan_item.id) do %>
+                <i class="fa fa-edit fa-lg" aria-hidden="true"></i>
+              <% end %>
+              <%= link_to plan_item_path(plan_item), method: :delete do %>
+                <i class="fa fa-trash-o fa-lg"></i>
+              <% end %>
+            </div>
+          </div>
+          <div>*** 詳細表示 ***</div>
+          <div>*** 詳細表示 ***</div>
+          <div>*** 詳細表示 ***</div>
+          <div>
+            <a href='#'>詳細追加</a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

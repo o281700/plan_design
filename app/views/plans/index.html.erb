@@ -4,17 +4,17 @@
   <% @plans.each do |plan| %>
     <div class='index_item'>
       <div class='index_item_title'>
-        <%= plan.title %>
+        <%= link_to plan.title, plan_path(plan), class: 'index_show_link' %>
         <br />
-        <%= link_to '#' do %>
-          <i class="fa fa-plus-square-o" aria-hidden="true"> アイテム追加</i>
+        <%= link_to new_plan_item_path(plan), class: 'index_fa' do %>
+          <i class="fa fa-plus-square-o" aria-hidden="true"> アイテム作成</i>
         <% end %>
       </div>
       <div class='plan_nav'>
         <%= link_to edit_plan_path(plan) do %>
           <i class="fa fa-edit fa-lg" aria-hidden="true"></i>
         <% end %>
-        <%= link_to plan, method: :delete do %>
+        <%= link_to plan_path(plan), method: :delete do %>
           <i class="fa fa-trash-o fa-lg"></i>
         <% end %>
       </div>
