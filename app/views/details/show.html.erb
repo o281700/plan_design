@@ -1,1 +1,20 @@
-詳細画面
+<%= render 'layouts/header' %>
+
+<div class='detail_show_wrapper'>
+  <div><%= 'タイトル：' %></div>
+  <div class='detail_show_content'>
+    <p><%= @detail.item.plan.title %></p>
+  </div>
+  <div><%= '項目：' %></div>
+  <div class='detail_show_content'>
+    <p><%= @detail.item.title %></p>
+  </div>
+  <div><%= '詳細概要：' %></div>
+  <div class='detail_show_content'>
+    <p><%= @detail.title %></p>
+  </div>
+  <div><%= '詳細内容：' %></div>
+  <div class='detail_text'>
+    <p><%= @detail.text %></p>
+  </div>
+</div>

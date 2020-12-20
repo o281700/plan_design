@@ -12,6 +12,10 @@ class DetailsController < ApplicationController
     end
   end
 
+  def show
+    @detail = Detail.find(params[:id])
+  end
+
   private
 
   def detail_params

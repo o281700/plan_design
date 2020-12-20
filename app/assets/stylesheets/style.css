@@ -227,3 +227,37 @@ header {
   word-wrap: break-word;
   color: #000;
 }
+
+/* detail show */
+.detail_show_wrapper {
+  margin: 30px auto 0;
+  width: 600px;
+}
+
+.detail_show_content {
+  border-bottom: 1px solid #000;
+  line-height: 30px;
+  margin: 20px 0;
+}
+
+.detail_show_content p {
+  font-size: large;
+  font-weight: bold;
+}
+
+.detail_text {
+  white-space: pre-wrap;
+  border-bottom: 1px solid #000;
+}
+
+.detail_text p {
+  font-size: large;
+  font-weight: bold;
+}
+
+.detail_btn a {
+  display: block;
+  border: 1px solid #000;
+  height: 100px;
+  width: 50px;
+}
