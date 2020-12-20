@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'plans#index'
   resources :plans do
     resources :items, only: [:new, :create, :destroy, :edit, :update] do
-      resources :details, only: [:new, :create]
+      resources :details, only: [:new, :create, :show]
     end
   end
 end

@@ -6,7 +6,7 @@ li {
   list-style: none;
 }
 
-input {
+input, textarea {
   border: 1px solid #dfdede;
 }
 
@@ -60,7 +60,7 @@ header {
   text-shadow: 3px 3px 3px #000;
 }
 
-/* user sign up_in */
+/* user sign up_in | Post new create edit update */
 .post_wrapper {
   margin-top: 10vh;
 }
@@ -85,6 +85,12 @@ header {
 
 .field input {
   height: 4vh;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.field textarea {
+  height: 30vh;
   width: 100%;
   background-color: #f0f0f0;
 }
@@ -159,6 +165,10 @@ header {
   padding: 5px;
 }
 
+.fa-sticky-note-o {
+  color: #888888;
+}
+
 .show_fa {
   color: #000;
   font-size: large;
@@ -182,6 +192,7 @@ header {
   overflow-x: scroll;
   display: flex;
   align-items: baseline;
+  line-height: 30px;
 }
 
 .show_item_title {
@@ -192,12 +203,27 @@ header {
 }
 
 .show_item_container {
-  min-width: 300px;
+  min-width: 250px;
   min-height: 10vh;
   border: 1px solid #000;
   margin: 20px;
   padding: 10px 20px;
-  border-radius: 5px;
   box-sizing: border-box;
   background-color: #f1efef;
+}
+
+.show_detail_link a {
+  color: #888888;
+}
+
+.show_detail {
+  border: 1px solid #000;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin: 5px auto;
+  padding: 0 10px;
+  min-height: 50px;
+  max-width: 200px;
+  word-wrap: break-word;
+  color: #000;
 }
