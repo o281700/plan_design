@@ -16,6 +16,12 @@ class DetailsController < ApplicationController
     @detail = Detail.find(params[:id])
   end
 
+  def destroy
+    @detail = Detail.find(params[:id])
+    @detail.destroy
+    redirect_to plan_path(@detail.item.plan.id)
+  end
+
   private
 
   def detail_params

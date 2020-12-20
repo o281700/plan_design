@@ -17,4 +17,7 @@
   <div class='detail_text'>
     <p><%= @detail.text %></p>
   </div>
+  <div class='detail_btn'>
+    <%= link_to '削除', plan_item_detail_path(@detail.item.plan.id, @detail.item.id, @detail.id), method: :delete %>
+  </div>
 </div>

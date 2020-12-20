@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:edit, :update]
+  before_action :set_item, only: [:edit, :update, :destroy]
 
   def new
     @item = Item.new
@@ -15,8 +15,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    item = Item.find(params[:plan_id])
-    item.destroy
+    @item.destroy
     redirect_to plan_path(item.plan.id)
   end
 
