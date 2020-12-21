@@ -1,0 +1,24 @@
+<%= render 'layouts/header' %>
+
+<div class='detail_show_wrapper'>
+  <div><%= 'タイトル：' %></div>
+  <div class='detail_show_content'>
+    <p><%= @detail.item.plan.title %></p>
+  </div>
+  <div><%= '項目：' %></div>
+  <div class='detail_show_content'>
+    <p><%= @detail.item.title %></p>
+  </div>
+  <div><%= '詳細概要：' %></div>
+  <div class='detail_show_content'>
+    <p><%= @detail.title %></p>
+  </div>
+  <div><%= '詳細内容：' %></div>
+  <div class='detail_text'>
+    <p><%= @detail.text %></p>
+  </div>
+  <div class='detail_btn'>
+    <%= link_to '編集', edit_plan_item_detail_path(@detail.item.plan.id, @detail.item.id, @detail.id), class: 'edit_btn' %>
+    <%= link_to '削除', plan_item_detail_path(@detail.item.plan.id, @detail.item.id, @detail.id), method: :delete, class: 'delete_btn' %>
+  </div>
+</div>
