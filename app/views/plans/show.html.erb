@@ -4,9 +4,14 @@
   <div class='show_wrapper'>
     <div class='show_title'>
       <span><%= @plan.title %></span>
-      <%= link_to new_plan_item_path(@plan.id), class: 'show_fa' do %>
-        <i class="fa fa-plus-square-o" aria-hidden="true"> アイテム追加</i>
-      <% end %>
+      <div class='back_btn'>
+        <%= link_to new_plan_item_path(@plan.id), class: 'show_fa' do %>
+          <i class="fa fa-plus-square-o" aria-hidden="true"> アイテム追加</i>
+        <% end %>
+        <%= link_to plans_path do %>
+          <i class="fa fa-hand-o-left" aria-hidden="true"></i>戻る
+        <% end %>
+      </div>
     </div>
     <div class='show_item_wrapper'>
       <% @plan.items.each do |plan_item| %>

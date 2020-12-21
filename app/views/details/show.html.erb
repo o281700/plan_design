@@ -21,4 +21,9 @@
     <%= link_to '編集', edit_plan_item_detail_path(@detail.item.plan.id, @detail.item.id, @detail.id), class: 'edit_btn' %>
     <%= link_to '削除', plan_item_detail_path(@detail.item.plan.id, @detail.item.id, @detail.id), method: :delete, class: 'delete_btn' %>
   </div>
+  <div class='back_btn'>
+    <%= link_to plan_path(@detail.item.plan.id) do %>
+      <i class="fa fa-hand-o-left" aria-hidden="true"></i>戻る
+    <% end %>
+  </div>
 </div>
