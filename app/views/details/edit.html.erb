@@ -1,0 +1,25 @@
+<%= render 'layouts/header' %>
+
+<div class='post_wrapper_plan'>
+  <div class='post_title'>
+    <h1>詳細変更</h1>
+  </div>
+  <div class='post_container'>
+    <%= form_with model: @detail, url: { action: :update }, local: true do |f| %>
+
+      <div class="field">
+        <%= f.label '詳細概要' %><br /><br />
+        <%= f.text_field :title, placeholder: '詳細概要を入力してください', autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label '詳細内容' %><br /><br />
+        <%= f.text_area :text, placeholder: '詳細概要を入力してください' %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "詳細編集", class: 'submit_btn' %>
+      </div>
+    <% end %>
+  </div>
+</div>

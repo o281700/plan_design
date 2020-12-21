@@ -1,4 +1,6 @@
 class DetailsController < ApplicationController
+  before_action :set_detail, only: [:show, :destroy, :edit, :update]
+
   def new
     @detail = Detail.new
   end
@@ -13,18 +15,31 @@ class DetailsController < ApplicationController
   end
 
   def show
-    @detail = Detail.find(params[:id])
   end
 
   def destroy
-    @detail = Detail.find(params[:id])
     @detail.destroy
     redirect_to plan_path(@detail.item.plan.id)
+  end
+
+  def edit
+  end
+
+  def update
+    if @detail.update(detail_params)
+      redirect_to plan_item_detail_path(@detail.item.plan.id, @detail.item.id, @detail.id)
+    else
+      render :edit
+    end
   end
 
   private
 
   def detail_params
     params.require(:detail).permit(:title, :text).merge(item_id: params[:item_id])
+  end
+
+  def set_detail
+    @detail = Detail.find(params[:id])
   end
 end

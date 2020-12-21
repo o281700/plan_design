@@ -13,7 +13,7 @@ input, textarea {
 /* Header */
 header {
   height: 80px;
-  background-color: rgb(122, 188, 247);
+  background-color: rgb(60, 135, 200);
   width: 100%;
   border-bottom: 2px solid #000;
   box-sizing: border-box;
@@ -70,7 +70,7 @@ header {
 }
 
 .post_title a {
-  color: rgb(90, 165, 235);
+  color: rgb(60, 135, 200);
 }
 
 .post_wrapper h1 {
@@ -103,7 +103,7 @@ header {
   height: 50px;
   width: 250px;
   border-radius:2.5em;
-  background-color: rgb(90, 165, 235);
+  background-color: rgb(60, 135, 200);
   color: #fff;
   font-size: 1em;
 }
@@ -255,20 +255,40 @@ header {
   font-weight: bold;
 }
 
-.detail_btn a {
+/* detail_btn */
+.edit_btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #eee;
+  border: 1px solid rgb(60, 135, 200);
   height: 35px;
   width: 150px;
   margin: 20px auto;
   box-sizing: border-box;
   color: #fff;
   border-radius: 5px;
-  background-color: #ff3939;
+  background-color: rgb(60, 135, 200);
 }
 
-.detail_btn a:hover {
+.edit_btn:hover {
   opacity: 0.7;
+}
+
+.delete_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  height: 35px;
+  width: 150px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  color: red;
+  border-radius: 5px;
+}
+
+.delete_btn:hover {
+  opacity: 0.7;
+  background-color: red;
+  color: #fff;
 }
