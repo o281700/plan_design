@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
-    redirect_to plan_path(item.plan.id)
+    redirect_to plan_path(@item.plan.id)
   end
 
   def edit
