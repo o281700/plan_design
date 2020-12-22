@@ -16,5 +16,12 @@
         <%= f.submit "アイテム編集", class: 'submit_btn' %>
       </div>
     <% end %>
+
+    <div class='back_btn'>
+      <%= link_to plan_path(@item.plan.id) do %>
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>戻る
+      <% end %>
+    </div>
+
   </div>
 </div>
