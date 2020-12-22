@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit]
   before_action :set_item, only: [:edit, :update, :destroy]
 
   def new
@@ -16,7 +17,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
-    redirect_to plan_path(item.plan.id)
+    redirect_to plan_path(@item.plan.id)
   end
 
   def edit

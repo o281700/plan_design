@@ -22,7 +22,7 @@
               <%= link_to edit_plan_item_path(@plan.id, plan_item.id) do %>
                 <i class="fa fa-edit fa-lg" aria-hidden="true"></i>
               <% end %>
-              <%= link_to plan_item_path(plan_item), method: :delete do %>
+              <%= link_to plan_item_path(@plan.id, plan_item.id), method: :delete do %>
                 <i class="fa fa-trash-o fa-lg"></i>
               <% end %>
             </div>

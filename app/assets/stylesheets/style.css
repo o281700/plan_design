@@ -106,6 +106,7 @@ header {
   background-color: rgb(60, 135, 200);
   color: #fff;
   font-size: 1em;
+  margin-bottom: 5px;
 }
 
 .submit_btn:hover {
