@@ -14,4 +14,10 @@ RSpec.describe Plan, type: :model do
     @plan.valid?
     expect(@plan.errors.full_messages).to include("Title can't be blank")
   end
+
+  it 'userが存在しなければ保存できないこと' do
+    @plan.user = nil
+    @plan.valid?
+    expect(@plan.errors.full_messages).to include("User must exist")
+  end
 end
