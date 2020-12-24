@@ -2,9 +2,9 @@ a {
   text-decoration: none;
 }
 
-li {
+/* li {
   list-style: none;
-}
+} */
 
 input, textarea {
   border: 1px solid #dfdede;
@@ -17,6 +17,10 @@ header {
   width: 100%;
   border-bottom: 2px solid #000;
   box-sizing: border-box;
+}
+
+.header_nav ul li{
+  list-style: none;
 }
 
 .nav_menu {
@@ -251,13 +255,12 @@ header {
 }
 
 .detail_text {
-  white-space: pre-wrap;
+  white-space: pre-line;
   border-bottom: 1px solid #000;
 }
 
-.detail_text p {
-  font-size: large;
-  font-weight: bold;
+.detail_text pre {
+  background-color: #eee;
 }
 
 /* detail_btn */
