@@ -239,7 +239,7 @@ header {
 
 /* detail show */
 .detail_show_wrapper {
-  margin: 30px auto 0;
+  margin: 30px auto 30px;
   width: 600px;
 }
 
