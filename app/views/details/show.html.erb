@@ -1,5 +1,3 @@
-<%= render 'layouts/header' %>
-
 <div class='detail_show_wrapper'>
   <div><%= 'タイトル：' %></div>
   <div class='detail_show_content'>
@@ -15,7 +13,7 @@
   </div>
   <div><%= '詳細内容：' %></div>
   <div class='detail_text'>
-    <p><%= @detail.text %></p>
+    <p><%= markdown(@detail.text) %></p>
   </div>
   <div class='detail_btn'>
     <%= link_to '編集', edit_plan_item_detail_path(@detail.item.plan.id, @detail.item.id, @detail.id), class: 'edit_btn' %>
