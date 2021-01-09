@@ -18,8 +18,8 @@
       </div>
 
       <div class="field">
-        <%= f.label 'アイテムリスト' %><br /><br />
-        <%= f.select :item_id, @items.map{ |i| [i.title, i.id] }, {}, {} %>
+        <%= f.label '項目' %><br /><br />
+        <%= f.select :item_id, @items.map{ |i| [i.title, i.id] } %>
       </div>
 
       <div class="actions">
