@@ -6,7 +6,7 @@ a {
   list-style: none;
 } */
 
-input, textarea {
+input, textarea, select {
   border: 1px solid #dfdede;
 }
 
@@ -87,7 +87,7 @@ header {
   max-width: 500px;
 }
 
-.field input {
+.field input, select{
   height: 4vh;
   width: 100%;
   background-color: #f0f0f0;

@@ -17,6 +17,8 @@
         <%= f.text_area :text, placeholder: '詳細内容を入力してください' %>
       </div>
 
+      <%= f.hidden_field :item_id, value: params[:item_id] %>
+
       <div class="actions">
         <%= f.submit "詳細を追加", class: 'submit_btn' %>
       </div>
