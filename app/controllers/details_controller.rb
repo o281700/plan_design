@@ -24,6 +24,7 @@ class DetailsController < ApplicationController
   end
 
   def edit
+    @items = Item.where(plan_id: params[:plan_id])
   end
 
   def update
@@ -37,7 +38,7 @@ class DetailsController < ApplicationController
   private
 
   def detail_params
-    params.require(:detail).permit(:title, :text).merge(item_id: params[:item_id])
+    params.require(:detail).permit(:title, :text, :item_id)
   end
 
   def set_detail

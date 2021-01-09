@@ -14,7 +14,12 @@
 
       <div class="field">
         <%= f.label '詳細内容' %><br /><br />
-        <%= f.text_area :text, placeholder: '詳細概要を入力してください' %>
+        <%= f.text_area :text, placeholder: '詳細内容を入力してください' %>
+      </div>
+
+      <div class="field">
+        <%= f.label 'アイテムリスト' %><br /><br />
+        <%= f.select :item_id, @items.map{ |i| [i.title, i.id] }, {}, {} %>
       </div>
 
       <div class="actions">
